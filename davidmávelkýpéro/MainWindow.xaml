@@ -1,0 +1,17 @@
+﻿<Window x:Class="davidmávelkýpéro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:davidmávelkýpéro"
+        mc:Ignorable="d"
+        Title="JM Encoder" Height="450" Width="800">
+    <StackPanel>
+        <Label Content="Reverse Cypher Encoder (RCE)" FontSize="50" FontStretch="Expanded" Background="DarkRed" Width="800" Height="100" HorizontalContentAlignment="Center"/>
+        <TextBox Name="TXTIntro" Text="RCE works on reversing the order of the alphabet, using that on a text spits out a text, that looks familiar to a normal cyphered text. ! YOU CAN ONLY USE STANDARD LETTERS !" Background="LightCoral" HorizontalContentAlignment="Center" Height="50" IsReadOnly="True"/>
+        <TextBox Name="EncodeEntry" Text="*write here...*" Height="100" Background="Bisque" HorizontalContentAlignment="Center"></TextBox>
+        <Button Name="Encode" Content="Encode" Click="Encode_Click" Background="Red" Height="20"/>
+        <TextBox Name="EncodeOutro" Text="" Height="100" Background="LightBlue" HorizontalContentAlignment="Center" IsReadOnly="True"></TextBox>
+        <TextBox Name="TXTRepresent" Text="↑ Encoded text appears here ↑" Background="LightCoral" HorizontalContentAlignment="Center" Height="50" IsReadOnly="True"/>
+    </StackPanel>
+</Window>
