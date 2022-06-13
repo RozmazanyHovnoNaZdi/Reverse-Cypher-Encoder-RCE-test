@@ -5,13 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:davidmávelkýpéro"
         mc:Ignorable="d"
-        Title="JM Encoder" Height="450" Width="800">
+        Title="JM Encoder" Height="450" Width="800" ResizeMode="CanMinimize">
     <StackPanel>
-        <Label Content="Reverse Cypher Encoder (RCE)" FontSize="50" FontStretch="Expanded" Background="DarkRed" Width="800" Height="100" HorizontalContentAlignment="Center"/>
-        <TextBox Name="TXTIntro" Text="RCE works on reversing the order of the alphabet, using that on a text spits out a text, that looks familiar to a normal cyphered text. ! YOU CAN ONLY USE STANDARD LETTERS !" Background="LightCoral" HorizontalContentAlignment="Center" Height="50" IsReadOnly="True"/>
-        <TextBox Name="EncodeEntry" Text="*write here...*" Height="100" Background="Bisque" HorizontalContentAlignment="Center"></TextBox>
-        <Button Name="Encode" Content="Encode" Click="Encode_Click" Background="Red" Height="20"/>
-        <TextBox Name="EncodeOutro" Text="" Height="100" Background="LightBlue" HorizontalContentAlignment="Center" IsReadOnly="True"></TextBox>
-        <TextBox Name="TXTRepresent" Text="↑ Encoded text appears here ↑" Background="LightCoral" HorizontalContentAlignment="Center" Height="50" IsReadOnly="True"/>
+        <Label Content="---- Reverse Cypher ----" FontSize="72" FontStretch="Expanded" Background="#19323C" Width="800" Height="100" HorizontalContentAlignment="Center" FontFamily="Bahnschrift Light SemiCondensed" FontWeight="Normal" FontStyle="Italic" HorizontalAlignment="Center" Foreground="#F3F7F0"/>
+        <TextBox Name="TXTIntro" Text="RC works on reversing the order of the alphabet, using that on a text spits out a text, that looks familiar to a normal cyphered text." Background="#F3F7F0" HorizontalContentAlignment="Center" Height="50" IsReadOnly="True" FontFamily="Bahnschrift Light SemiCondensed"/>
+        <TextBox Name="EncodeEntry" Text="*write here...*" Height="100" Background="#F0E6E5" HorizontalContentAlignment="Center" FontFamily="Leelawadee UI Semilight"></TextBox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="Encode" Content="Encode" Click="Encode_Click" Background="#F2545B" Height="20" FontFamily="Bahnschrift SemiCondensed"/>
+            <Button Grid.Column="1" Name="Decode" Content="Decode"  Background="#A93F55" Height="20" Click="Decode_Click" FontFamily="Bahnschrift SemiCondensed"/>
+        </Grid>
+        <TextBox Name="EncodeOutro" Text="" Height="100" Background="#E4EEF0" HorizontalContentAlignment="Center" IsReadOnly="True" FontFamily="Leelawadee UI Semilight"></TextBox>
+        <TextBox Name="TXTRepresent" Text="↑ Encoded/Decoded text appears here ↑" Background="#F3F7F0" HorizontalContentAlignment="Center" Height="45" IsReadOnly="True" FontFamily="Bahnschrift Light SemiCondensed"></TextBox>
+        <TextBox Name="NameRepresent" Text="" Background="#19323C" Height="20" IsReadOnly="True" FontFamily="Bahnschrift Light SemiCondensed"  Foreground="#F3F7F0"></TextBox>
     </StackPanel>
 </Window>

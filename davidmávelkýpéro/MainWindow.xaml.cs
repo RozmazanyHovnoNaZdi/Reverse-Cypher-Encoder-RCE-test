@@ -20,8 +20,10 @@ namespace davidmávelkýpéro
     /// </summary>
     public partial class MainWindow : Window
     {
-        string znaky = "aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž,.; ";
-        string znakyObracene = "žzýyxwvůúuťtšsřrqpóoňnmlkjíihgfěéeďdčcbáa,.; ";
+        string znaky = "aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž,.()*-+/;0987654321=  ";
+        string znakyObracene = "žzýyxwvůúuťtšsřrqpóoňnmlkjíihgfěéeďdčcbáa,.)(*+-/;1234567890= ";
+        string DecodeZnaky = "žzýyxwvůúuťtšsřrqpóoňnmlkjíihgfěéeďdčcbáa,.)(*+-/;1234567890= ";
+        string DecodeZnakyObracene = "aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž,.()*-+/;0987654321= ";
         public MainWindow()
         {
             InitializeComponent();
@@ -42,6 +44,25 @@ namespace davidmávelkýpéro
                 prevracenyTxt += znakyObracene[index];
             }
             return prevracenyTxt;
+
+        }
+
+        private void Decode_Click(object sender, RoutedEventArgs e)
+        {
+            EncodeOutro.Text = DecoderMetoda();
+        }
+        private string DecoderMetoda()
+        {
+            string obsahTxt = EncodeEntry.Text.ToLower();
+            string prevracenyTxt = "";
+            for (int i = 0; i < obsahTxt.Length; i++)
+            {
+                char znak = obsahTxt[i];
+                int index = znaky.IndexOf(znak);
+                prevracenyTxt += znakyObracene[index];
+            }
+            return prevracenyTxt;
+
         }
     }
 }
